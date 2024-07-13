@@ -1,0 +1,100 @@
+<script setup lang="ts">
+import type { ActionLinkInterface, CurrencyInterface, NavLinkInterface } from '~/utils/types'
+
+const headerActions: NavLinkInterface[] = [
+  {
+    url: '/settings',
+    icon: '/icons/settings.svg'
+  },
+  {
+    url: '/scan',
+    icon: '/icons/qr-scan.svg'
+  }
+]
+
+const actionLinks: ActionLinkInterface[] = [
+  {
+    url: '/send',
+    icon: '/icons/arrow-up.svg',
+    action: 'Send',
+    size: 'regular'
+  },
+  {
+    url: '/add',
+    icon: '/icons/plus.svg',
+    action: 'Add',
+    size: 'regular'
+  },
+  {
+    url: '/swap',
+    icon: '/icons/arrow-left-right.svg',
+    action: 'Swap',
+    size: 'big'
+  },
+  {
+    url: '/p2p',
+    icon: '/icons/store.svg',
+    action: 'P2P',
+    size: 'big'
+  }
+]
+
+const currencies: CurrencyInterface[] = [
+  {
+    url: '/usdt',
+    icon: '/icons/bitcoin.svg',
+    name: 'dollars',
+    priceInUSD: 0.00,
+    ownership: 0,
+    symbol: 'USDT',
+    ownershipUSDValue: 0.00
+  },
+  {
+    url: '/eth',
+    icon: '/icons/eth.svg',
+    name: 'ethereum',
+    priceInUSD: 0.00,
+    ownership: 0,
+    symbol: 'ETH',
+    ownershipUSDValue: 0.00
+  },
+  {
+    url: '/bnb',
+    icon: '/icons/bnb.svg',
+    name: 'BNB',
+    priceInUSD: 0.00,
+    ownership: 0,
+    symbol: 'BNB',
+    ownershipUSDValue: 0.00
+  },
+  {
+    url: '/xrp',
+    icon: '/icons/xrp.svg',
+    name: 'ripple',
+    priceInUSD: 0.00,
+    ownership: 0,
+    symbol: 'XRP',
+    ownershipUSDValue: 0.00
+  }
+]
+</script>
+
+<template>
+  <div class="flex flex-col gap-y-4">
+    <nav class="flex justify-between items-center">
+      <DashboardNavLink v-for="(action, index) in headerActions" :key="index" :="action" />
+    </nav>
+    <main class="flex flex-col gap-y-4">
+      <section class="flex flex-col items-center">
+        <h1 class="text-lg font-normal">Total balance</h1>
+        <p class="text-4xl font-medium">$0.00</p>
+      </section>
+      <div class="mt-5 flex gap-x-6 items-center justify-center">
+        <BaseActionLink v-for="(action, index) in actionLinks" :key="index" :="action" />
+      </div>
+      <div class="flex flex-col gap-y-2">
+        <DashboardCurrencyLink v-for="(currency, index) in currencies" :key="index" :="currency" />
+      </div>
+    </main>
+  </div>
+</template>
