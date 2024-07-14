@@ -17,7 +17,8 @@ const actionLinks: ActionLinkInterface[] = [
     url: '/send',
     icon: '/icons/arrow-up.svg',
     action: 'Send',
-    size: 'regular'
+    size: 'regular',
+    isButton: true
   },
   {
     url: '/add',
@@ -77,6 +78,14 @@ const currencies: CurrencyInterface[] = [
     ownershipUSDValue: 0.00
   }
 ]
+
+const addModalIsVisible = ref(false)
+
+const onActionLinkClick = (index: number) => {
+  if (index === 0) {
+    addModalIsVisible.value = true
+  }
+}
 </script>
 
 <template>
@@ -90,11 +99,12 @@ const currencies: CurrencyInterface[] = [
         <p class="text-4xl font-medium">$0.00</p>
       </section>
       <div class="mt-5 flex gap-x-6 items-center justify-center">
-        <BaseActionLink v-for="(action, index) in actionLinks" :key="index" :="action" />
+        <BaseActionLink v-for="(action, index) in actionLinks" :key="index" :="action" @click="onActionLinkClick(index)" />
       </div>
       <div class="flex flex-col gap-y-2">
         <DashboardCurrencyLink v-for="(currency, index) in currencies" :key="index" :="currency" />
       </div>
     </main>
+    <AddModal v-if="addModalIsVisible" @close="addModalIsVisible = false" />
   </div>
 </template>

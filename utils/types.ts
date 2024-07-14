@@ -3,6 +3,7 @@ export interface ActionLinkInterface {
   icon: string
   action: string
   size: string
+  isButton?: boolean
 }
 
 export interface NavLinkInterface {
