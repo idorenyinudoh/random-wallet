@@ -20,3 +20,11 @@ export interface CurrencyInterface {
   symbol: string
   ownershipUSDValue: number
 }
+
+export interface BaseNavLinkInterface {
+  title: string
+  description: string
+  icon: string
+  iconBackground: string
+  url: string
+}
