@@ -62,7 +62,7 @@ const onActionLinkClick = (index: number) => {
         <p class="text-sm font-normal text-[#9c9c9c]">{{ priceInUSD }} {{ symbol }}</p>
       </div>
       <div class="w-20 h-20 justify-self-end">
-        <img :src="icon" :alt="name.toLocaleLowerCase()">
+        <img :src="icon" :alt="name.toLocaleLowerCase()" class="w-full h-full">
       </div>
     </div>
     <div class="py-5 flex flex-col gap-y-5">

@@ -42,6 +42,15 @@ const actionLinks: ActionLinkInterface[] = [
 
 const currencies: CurrencyInterface[] = [
   {
+    url: '/usdt',
+    icon: '/icons/usdt.svg',
+    name: 'tether',
+    priceInUSD: 0.00,
+    ownership: 0,
+    symbol: 'USDT',
+    ownershipUSDValue: 0.00
+  },
+  {
     url: '/btc',
     icon: '/icons/bitcoin.svg',
     name: 'bitcoin',
@@ -66,15 +75,6 @@ const currencies: CurrencyInterface[] = [
     priceInUSD: 0.00,
     ownership: 0,
     symbol: 'BNB',
-    ownershipUSDValue: 0.00
-  },
-  {
-    url: '/xrp',
-    icon: '/icons/xrp.svg',
-    name: 'ripple',
-    priceInUSD: 0.00,
-    ownership: 0,
-    symbol: 'XRP',
     ownershipUSDValue: 0.00
   }
 ]

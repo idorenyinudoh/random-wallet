@@ -1,6 +1,13 @@
 <script setup lang="ts">
 const currencies = [
   {
+    name: 'Tether',
+    symbol: 'USDT',
+    balance: 0,
+    icon: '/icons/usdt.svg',
+    url: '/usdt/receive'
+  },
+  {
     name: 'Bitcoin',
     symbol: 'BTC',
     balance: 0,
@@ -20,13 +27,6 @@ const currencies = [
     balance: 0,
     icon: '/icons/bnb.svg',
     url: '/bnb/receive'
-  },
-  {
-    name: 'Ripple',
-    symbol: 'XRP',
-    balance: 0,
-    icon: '/icons/xrp.svg',
-    url: '/xrp/receive'
   }
 ]
 
