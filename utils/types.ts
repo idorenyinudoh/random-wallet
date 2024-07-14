@@ -3,6 +3,7 @@ export interface ActionLinkInterface {
   icon: string
   action: string
   size: string
+  isButton?: boolean
 }
 
 export interface NavLinkInterface {
@@ -18,4 +19,12 @@ export interface CurrencyInterface {
   ownership: number
   symbol: string
   ownershipUSDValue: number
+}
+
+export interface BaseNavLinkInterface {
+  title: string
+  description?: string
+  icon: string
+  iconBackground: string
+  url: string
 }
