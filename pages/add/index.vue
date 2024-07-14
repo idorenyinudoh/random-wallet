@@ -14,7 +14,7 @@ const links: BaseNavLinkInterface[] = [
     description: 'Receive from another wallet',
     icon: '/icons/qr-code.svg',
     iconBackground: '#969EA7',
-    url: '/add'
+    url: '/add/choose'
   }
 ]
 </script>

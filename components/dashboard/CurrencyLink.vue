@@ -5,7 +5,7 @@ defineProps<CurrencyInterface>()
 </script>
 
 <template>
-  <NuxtLink :to="url" class="py-2 px-3 rounded-2xl flex justify-between items-center bg-white hover:brightness-90 transition-all duration-200 ease-linear">
+  <NuxtLink :to="url" class="py-2 px-3 rounded-2xl flex justify-between items-center bg-white hover:brightness-90 base-transition">
     <div class="flex gap-x-1 items-center">
       <img :src="icon" :alt="name.toLocaleLowerCase()" class="w-12 h-12">
       <div class="flex flex-col items-start">

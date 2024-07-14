@@ -42,12 +42,12 @@ const actionLinks: ActionLinkInterface[] = [
 
 const currencies: CurrencyInterface[] = [
   {
-    url: '/usdt',
+    url: '/bitcoin',
     icon: '/icons/bitcoin.svg',
-    name: 'dollars',
+    name: 'bitcoin',
     priceInUSD: 0.00,
     ownership: 0,
-    symbol: 'USDT',
+    symbol: 'BTC',
     ownershipUSDValue: 0.00
   },
   {

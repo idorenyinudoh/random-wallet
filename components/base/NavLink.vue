@@ -5,7 +5,7 @@ defineProps<BaseNavLinkInterface>()
 </script>
 
 <template>
-  <NuxtLink :to="url" class="py-4 px-3 rounded-2xl flex justify-between items-center bg-white hover:brightness-90 transition-all duration-200 ease-linear">
+  <NuxtLink :to="url" class="py-4 px-3 rounded-2xl flex justify-between items-center bg-white hover:brightness-90 base-transition">
     <div class="flex gap-x-3 items-center">
       <div class="w-12 h-12 rounded-full flex justify-center items-center" :style="{ backgroundColor: iconBackground }">
         <img :src="icon" :alt="icon.split('/')[2].split('.svg')[0]" class="w-7 h-7">
