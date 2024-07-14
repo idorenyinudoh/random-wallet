@@ -23,7 +23,7 @@ export interface CurrencyInterface {
 
 export interface BaseNavLinkInterface {
   title: string
-  description: string
+  description?: string
   icon: string
   iconBackground: string
   url: string

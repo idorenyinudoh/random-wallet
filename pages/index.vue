@@ -42,7 +42,7 @@ const actionLinks: ActionLinkInterface[] = [
 
 const currencies: CurrencyInterface[] = [
   {
-    url: '/bitcoin',
+    url: '/btc',
     icon: '/icons/bitcoin.svg',
     name: 'bitcoin',
     priceInUSD: 0.00,

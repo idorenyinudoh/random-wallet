@@ -12,7 +12,7 @@ defineProps<BaseNavLinkInterface>()
       </div>
       <div class="flex flex-col items-start gap-y-[1px]">
         <p class="text-lg font-medium leading-5 capitalize">{{ title }}</p>
-        <p class="text-sm font-normal text-[#9c9c9c]">{{ description }}</p>
+        <p v-if="description" class="text-sm font-normal text-[#9c9c9c]">{{ description }}</p>
       </div>
     </div>
     <div>

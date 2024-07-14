@@ -5,7 +5,7 @@ const currencies = [
     symbol: 'BTC',
     balance: 0,
     icon: '/icons/bitcoin.svg',
-    url: '/bitcoin/receive'
+    url: '/btc/receive'
   },
   {
     name: 'Ethereum',
