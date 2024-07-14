@@ -3,7 +3,7 @@ defineEmits(['close'])
 </script>
 
 <template>
-  <div class="absolute inset-0 w-full h-full rounded-[32px] bg-[#78777A]/40 flex justify-center items-center" @click.self="$emit('close')">
+  <div class="absolute inset-0 w-full h-full sm:rounded-[32px] bg-[#78777A]/40 flex justify-center items-center" @click.self="$emit('close')">
     <div class="w-[80%] rounded-3xl bg-[#FEFEFE]">
       <p class="px-6 pt-6 pb-4 text-center font-medium">Your wallet is empty. Would you like to buy some crypto?</p>
       <div class="border-t border-solid border-[#E5E7EB] grid grid-cols-2 justify-between items-center divide-x-[1px]">
