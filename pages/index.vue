@@ -79,6 +79,13 @@ const currencies: CurrencyInterface[] = [
   }
 ]
 
+const transactionHistoryData: BaseNavLinkInterface = {
+  title: 'Transaction history',
+  icon: '/icons/list-check.svg',
+  iconBackground: '#969EA7',
+  url: '/history'
+}
+
 const addModalIsVisible = ref(false)
 
 const onActionLinkClick = (index: number) => {
@@ -104,6 +111,7 @@ const onActionLinkClick = (index: number) => {
       <div class="flex flex-col gap-y-2">
         <DashboardCurrencyLink v-for="(currency, index) in currencies" :key="index" :="currency" />
       </div>
+      <BaseNavLink :="transactionHistoryData" class="my-3" />
     </main>
     <AddModal v-if="addModalIsVisible" @close="addModalIsVisible = false" />
   </div>
